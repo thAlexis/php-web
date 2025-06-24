@@ -42,6 +42,7 @@ $_SESSION['nom'] = $username;
 </head>
 
 <body>
+  <?php include "./_menu.php" ?>
   <h1>Gestion d'utilisateur</h1>
   <p>
     Bonjour
