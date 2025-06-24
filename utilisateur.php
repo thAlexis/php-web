@@ -2,6 +2,7 @@
 // Démarrer la session
 session_start();
 
+
 $username = "Doe";
 if ($_REQUEST['username'] != "") {
   $username = $_REQUEST['username'];

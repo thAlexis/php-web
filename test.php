@@ -9,6 +9,17 @@ if (isset($_SESSION['nom'])) {
   $nom_s = $_SESSION['nom'];
 };
 
+var_dump($_SERVER);
+
+// if ($_SERVER['HTTP_REFERER'] == "http://localhost/php-web/test.php") {
+//   session_unset();
+//   session_destroy();
+// };
+
+if (str_contains($_SERVER['HTTP_REFERER'], "test.php")) {
+  session_unset();
+  session_destroy();
+};
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +40,8 @@ if (isset($_SESSION['nom'])) {
   <h2>Sessions</h2>
   <p>Nom : <?= $nom_s ?></p>
   <p>
-    <a href="vider_session.php">Vider la session</a>
+    <a href="test.php">Vider la session
+    </a>
   </p>
 
 </body>
