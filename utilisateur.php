@@ -10,6 +10,9 @@ if (isset($_REQUEST['genre']) and $_REQUEST['genre'] == 'homme') {
   $genre = "monsieur";
 };
 
+// ajouter un cookie
+setcookie("nom", $username);
+setcookie("genre", $genre);
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +37,7 @@ if (isset($_REQUEST['genre']) and $_REQUEST['genre'] == 'homme') {
     // echo $genre == "homme" ? "Monsieur " : "Madame ";
     echo "$genre $username, vous avez $age ans et êtes de $ville"
     ?>
+    <a href="">Consulter les cookies</a>
   </p>
 </body>
 
